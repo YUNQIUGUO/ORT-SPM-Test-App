@@ -9,6 +9,8 @@ import SwiftUI
 import Foundation
 @testable import OnnxRuntimeBindings
 
+private let modelPath: String? = Bundle.main.path(forResource: "single_add.basic", ofType: "ort")
+
 struct ContentView: View {
     var body: some View {
         VStack {
@@ -29,8 +31,6 @@ func SPMTest_GetORTVersion() -> String {
 }
 
 func SPMTest_CreateORTSession() -> String {
-    let modelPath: String? = Bundle.main.path(forResource: "single_add.basic", ofType: "ort")
-    
     do {
         let env = try ORTEnv(loggingLevel: ORTLoggingLevel.verbose)
         let options = try ORTSessionOptions()
@@ -42,6 +42,21 @@ func SPMTest_CreateORTSession() -> String {
     } catch let error as NSError {
         print("Error: \(error.localizedDescription)")
         return "Unable to create an ORT session."
+    }
+}
+
+func SPMTest_AppendCoreMLEP() -> String  {
+    do {
+        let env = try ORTEnv(loggingLevel: ORTLoggingLevel.verbose)
+        let sessionOptions: ORTSessionOptions = try ORTSessionOptions()
+        let coreMLOptions: ORTCoreMLExecutionProviderOptions = ORTCoreMLExecutionProviderOptions()
+        coreMLOptions.enableOnSubgraphs = true
+        try sessionOptions.appendCoreMLExecutionProvider(with: coreMLOptions)
+        _ = try ORTSession(env: env, modelPath: modelPath!, sessionOptions: sessionOptions)
+        return "Successfully created an inference session with CoreML EP"
+    } catch let error as NSError {
+        print("Error: \(error.localizedDescription)")
+        return "Unable to create an ORT session with CoreML EP"
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  ORT_SPM_Test_AppApp.swift
+//  ORT_SPM_Test_App.swift
 //  ORT-SPM-Test-App
 //
 //  Created by rachguo on 7/17/23.
