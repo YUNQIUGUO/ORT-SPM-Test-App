@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51E63C462A65BD7900D308B1 /* ORT_SPM_Test_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E63C452A65BD7900D308B1 /* ORT_SPM_Test_AppApp.swift */; };
+		51E63C462A65BD7900D308B1 /* ORT_SPM_Test_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E63C452A65BD7900D308B1 /* ORT_SPM_Test_App.swift */; };
 		51E63C482A65BD7900D308B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E63C472A65BD7900D308B1 /* ContentView.swift */; };
 		51E63C4A2A65BD7D00D308B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51E63C492A65BD7D00D308B1 /* Assets.xcassets */; };
 		51E63C4D2A65BD7D00D308B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51E63C4C2A65BD7D00D308B1 /* Preview Assets.xcassets */; };
@@ -15,6 +15,7 @@
 		51E63C612A65BD7D00D308B1 /* ORT_SPM_Test_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E63C602A65BD7D00D308B1 /* ORT_SPM_Test_AppUITests.swift */; };
 		51E63C632A65BD7D00D308B1 /* ORT_SPM_Test_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E63C622A65BD7D00D308B1 /* ORT_SPM_Test_AppUITestsLaunchTests.swift */; };
 		51E63C712A65CCE900D308B1 /* onnxruntime in Frameworks */ = {isa = PBXBuildFile; productRef = 51E63C702A65CCE900D308B1 /* onnxruntime */; };
+		51E63C742A65D41700D308B1 /* single_add.basic.ort in Resources */ = {isa = PBXBuildFile; fileRef = 51E63C732A65D41700D308B1 /* single_add.basic.ort */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		51E63C422A65BD7900D308B1 /* ORT-SPM-Test-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ORT-SPM-Test-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51E63C452A65BD7900D308B1 /* ORT_SPM_Test_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORT_SPM_Test_AppApp.swift; sourceTree = "<group>"; };
+		51E63C452A65BD7900D308B1 /* ORT_SPM_Test_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORT_SPM_Test_App.swift; sourceTree = "<group>"; };
 		51E63C472A65BD7900D308B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		51E63C492A65BD7D00D308B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51E63C4C2A65BD7D00D308B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 		51E63C5C2A65BD7D00D308B1 /* ORT-SPM-Test-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ORT-SPM-Test-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E63C602A65BD7D00D308B1 /* ORT_SPM_Test_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORT_SPM_Test_AppUITests.swift; sourceTree = "<group>"; };
 		51E63C622A65BD7D00D308B1 /* ORT_SPM_Test_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORT_SPM_Test_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51E63C732A65D41700D308B1 /* single_add.basic.ort */ = {isa = PBXFileReference; lastKnownFileType = file; path = single_add.basic.ort; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 		51E63C442A65BD7900D308B1 /* ORT-SPM-Test-App */ = {
 			isa = PBXGroup;
 			children = (
-				51E63C452A65BD7900D308B1 /* ORT_SPM_Test_AppApp.swift */,
+				51E63C722A65D41700D308B1 /* Resources */,
+				51E63C452A65BD7900D308B1 /* ORT_SPM_Test_App.swift */,
 				51E63C472A65BD7900D308B1 /* ContentView.swift */,
 				51E63C492A65BD7D00D308B1 /* Assets.xcassets */,
 				51E63C4B2A65BD7D00D308B1 /* Preview Content */,
@@ -127,6 +130,14 @@
 				51E63C622A65BD7D00D308B1 /* ORT_SPM_Test_AppUITestsLaunchTests.swift */,
 			);
 			path = "ORT-SPM-Test-AppUITests";
+			sourceTree = "<group>";
+		};
+		51E63C722A65D41700D308B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				51E63C732A65D41700D308B1 /* single_add.basic.ort */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E63C4D2A65BD7D00D308B1 /* Preview Assets.xcassets in Resources */,
+				51E63C742A65D41700D308B1 /* single_add.basic.ort in Resources */,
 				51E63C4A2A65BD7D00D308B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E63C482A65BD7900D308B1 /* ContentView.swift in Sources */,
-				51E63C462A65BD7900D308B1 /* ORT_SPM_Test_AppApp.swift in Sources */,
+				51E63C462A65BD7900D308B1 /* ORT_SPM_Test_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
