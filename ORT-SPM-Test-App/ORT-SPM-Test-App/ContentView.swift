@@ -45,21 +45,6 @@ func SPMTest_CreateORTSession() -> String {
     }
 }
 
-func SPMTest_AppendCoreMLEP() -> String  {
-    do {
-        let env = try ORTEnv(loggingLevel: ORTLoggingLevel.verbose)
-        let sessionOptions: ORTSessionOptions = try ORTSessionOptions()
-        let coreMLOptions: ORTCoreMLExecutionProviderOptions = ORTCoreMLExecutionProviderOptions()
-        coreMLOptions.enableOnSubgraphs = true
-        try sessionOptions.appendCoreMLExecutionProvider(with: coreMLOptions)
-        _ = try ORTSession(env: env, modelPath: modelPath!, sessionOptions: sessionOptions)
-        return "Successfully created an inference session with CoreML EP"
-    } catch let error as NSError {
-        print("Error: \(error.localizedDescription)")
-        return "Unable to create an ORT session with CoreML EP"
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
