@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "onnxruntime-swift-package-manager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/microsoft/onnxruntime-swift-package-manager",
+      "state" : {
+        "branch" : "yguo/add-initial-files",
+        "revision" : "6dcdf0b6b47c5bf1cbc871820248aa58e0a461e6"
+      }
+    }
+  ],
+  "version" : 2
+}
