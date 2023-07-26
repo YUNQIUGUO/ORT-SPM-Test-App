@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Foundation
-@testable import OnnxRuntimeBindings
+import OnnxRuntimeBindings
 
 private let modelPath: String? = Bundle.main.path(forResource: "single_add.basic", ofType: "ort")
 
