@@ -3,7 +3,7 @@
 This is a test swift app project to consume the Swift Package dependency from the new repo:
 https://github.com/microsoft/onnxruntime-swift-package-manager
 
-(Currently added package dependency as branch: yguo/add-inital-files)
+Currently added package dependency from the new repo's specific branch (yguo/add-inital-files)
 
 Later on, can update to main branch / Or official release version from the repo
 
